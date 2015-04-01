@@ -1,0 +1,216 @@
+@import 'reset';
+
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+.post-list{
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-button {
+		width: 8px;
+		height:5px;
+	}
+	::-webkit-scrollbar-track {
+		background:#eee;
+		border: thin solid lightgray;
+		box-shadow: 0px 0px 3px #dfdfdf inset;
+		border-radius:10px;
+	}
+	::-webkit-scrollbar-thumb {
+		background:#999;
+		border: thin solid gray;
+		border-radius:10px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background:#7d7d7d;
+	}	
+}		
+
+
+$font-family: 'Lato', sans-serif;
+// Color Scheme - http://adobe.ly/1G9lpwk
+$color-1:#111111; // dark gray
+$color-2:#1C2930; // light gray
+$color-3:#FFF17B; // yellow highlight
+$color-4:#E65149; // red highlight
+$color-5:#65E5AD; // green highlight
+$light:  #FFFFFF;
+$dark:   #222222;
+
+input{
+	font-family: $font-family;
+}
+body{
+	color:$light;
+	background: $dark;
+	font-family: $font-family;
+	width: 100%;
+	position: relative;
+}
+header{
+	// height:80px;
+	line-height: 60px;
+	display: block;
+	background: $color-1;
+} 
+nav{
+	text-align: right;
+	.signin{
+		padding-right: 20px;
+	}
+}
+
+#login-dropdown-list {
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  left: auto;
+}
+
+.absence-form-wrapper{
+	width: 90%;
+	max-width: 400px;
+	margin: 20px;
+	padding: 20px;
+	background: #fefefe;
+	border-radius: 4px;
+	height: 480px;
+	color:$dark;
+	position: relative;
+	.close{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	label,input{
+		display: block;
+	}
+	label{
+		margin: 5px 0;
+	}
+	h2{
+		text-transform: uppercase;
+	}
+	input, select, textarea{
+		box-sizing:border-box;
+		resize:none;
+		width: 100%;
+		padding:5px 6px;
+		margin:5px;
+		margin: 0 auto;
+		border-radius:4px;
+		background: #fff;
+		border:1px solid #ccc;
+	}
+	input[type="date"],
+	input[type="time"]{
+		width: 49.5%;
+		display: inline-block;
+	}
+	input[type="submit"]{
+background: $color-5;
+		color:$light;
+		display: block;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: $font-family;
+		border:none;
+		outline:0;
+		padding:6px 12px;
+		width:50%;
+		margin: 0 auto;
+		margin-top: 5px;
+		border-radius:4px;
+	}
+}
+.post-list{
+	width: 90%;
+	max-width: 400px;
+	margin: 20px;
+	padding: 20px;
+	background: #333;
+	border-radius: 4px;
+	ul{
+		margin: 20px 0;
+		height: 400px;
+		position: relative;
+		overflow-y:auto;
+	}
+	h2{
+		text-transform: uppercase;
+	}
+	button{
+		background: $color-3;
+		color:$dark;
+		display: block;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: $font-family;
+		border:none;
+		outline:0;
+		padding:6px 12px;
+		width:50%;
+		margin: 0 auto;
+		border-radius:4px;
+	}
+	li{
+		background: #3a3a3a;
+		margin:10px 0;
+		box-sizing:border-box;
+		padding: 20px;
+		border-radius: 4px;
+		position: relative;
+		.date{
+			display: block;
+			position: absolute;
+			right: 10px;
+			font-size: 0.8em;
+			top: 10px;
+		}
+	}
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+.flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 500px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

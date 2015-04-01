@@ -1,0 +1,337 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+html,
+body {
+  height: 100%; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+b,
+strong {
+  font-weight: bold; }
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+ol,
+ul {
+  list-style: none;
+  padding-left: 0px; }
+
+li {
+  display: list-item; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left; }
+
+q {
+  quotes: none; }
+
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+sub,
+sup,
+small {
+  font-size: 75%; }
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+svg {
+  overflow: hidden; }
+
+.post-list ::-webkit-scrollbar {
+  width: 8px; }
+.post-list ::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px; }
+.post-list ::-webkit-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0px 0px 3px #dfdfdf inset;
+  border-radius: 10px; }
+.post-list ::-webkit-scrollbar-thumb {
+  background: #999;
+  border: thin solid gray;
+  border-radius: 10px; }
+.post-list ::-webkit-scrollbar-thumb:hover {
+  background: #7d7d7d; }
+
+input {
+  font-family: "Lato", sans-serif; }
+
+body {
+  color: #FFFFFF;
+  background: #222222;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  position: relative; }
+
+header {
+  line-height: 60px;
+  display: block;
+  background: #111111; }
+
+nav {
+  text-align: right; }
+  nav .signin {
+    padding-right: 20px; }
+
+#login-dropdown-list {
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  left: auto; }
+
+.absence-form-wrapper {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  background: #fefefe;
+  border-radius: 4px;
+  height: 480px;
+  color: #222222;
+  position: relative; }
+  .absence-form-wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+  .absence-form-wrapper label, .absence-form-wrapper input {
+    display: block; }
+  .absence-form-wrapper label {
+    margin: 5px 0; }
+  .absence-form-wrapper h2 {
+    text-transform: uppercase; }
+  .absence-form-wrapper input, .absence-form-wrapper select, .absence-form-wrapper textarea {
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    padding: 5px 6px;
+    margin: 5px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #ccc; }
+  .absence-form-wrapper input[type="date"],
+  .absence-form-wrapper input[type="time"] {
+    width: 49.5%;
+    display: inline-block; }
+  .absence-form-wrapper input[type="submit"] {
+    background: #65E5AD;
+    color: #FFFFFF;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    border: none;
+    outline: 0;
+    padding: 6px 12px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 4px; }
+
+.post-list {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  background: #333;
+  border-radius: 4px; }
+  .post-list ul {
+    margin: 20px 0;
+    height: 400px;
+    position: relative;
+    overflow-y: auto; }
+  .post-list h2 {
+    text-transform: uppercase; }
+  .post-list button {
+    background: #FFF17B;
+    color: #222222;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    border: none;
+    outline: 0;
+    padding: 6px 12px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 4px; }
+  .post-list li {
+    background: #3a3a3a;
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative; }
+    .post-list li .date {
+      display: block;
+      position: absolute;
+      right: 10px;
+      font-size: 0.8em;
+      top: 10px; }
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000; }
+
+.flip-container.flip .flipper {
+  transform: rotateY(180deg); }
+
+.flip-container, .front, .back {
+  width: 500px;
+  height: 480px; }
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg); }

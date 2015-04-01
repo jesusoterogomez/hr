@@ -1,0 +1,101 @@
+<head>
+	<title>hr</title>
+</head>
+
+<body>
+	<header class="top">
+		<nav >
+			<div class="signin">
+				{{> loginButtons}}
+			</div>
+		</nav>
+	</header>
+	{{#if equals view "user"}}
+	{{> list}}
+	{{/if}}
+
+	{{#if equals view "editUser"}}
+	{{> profile}}
+	{{/if}}
+
+	{{#if equals view "admin"}}
+	{{> admin}}
+	{{/if}}
+</body>
+
+<template name="list">
+
+
+	<div class="flip-container">
+		<div class="flipper">
+			<div class="front">
+				<div class="post-list">
+					<h2>Sent Absence Forms</h2>
+
+					<ul>
+						{{#each posts}}
+						<li>
+							<span class="date">{{formatDateTime date}}</span>
+							<p>Reason: {{data.reason}}</p>
+							<!-- <p>{{data.type}}</p> -->
+							<p>From: {{formatDate data.startdate}} {{formatTime data.starttime}}</p>
+							<p>To: {{formatDate data.enddate}} {{ formatTime data.endtime}}</p>
+						</li>
+						{{/each}}
+					</ul>
+					<button class="new-absence">Request New Absence +</button>
+				</div>
+			</div>
+			<div class="back">
+				<div class="absence-form-wrapper">
+					<h2>New Absence Form</h2>
+					<span class='fa fa-close close'></span>
+
+					{{> form}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</template>
+
+<template name="form">
+	<form class="absence-form" action="#">
+		<label for="type">Type of Request</label>
+		<select name="type" required>
+			<option value="inform">Inform</option>
+			<option value="permission">Permission</option>
+		</select>
+
+		<label for="startdate">Start Date</label>
+		<input name="startdate" type="date"  required>
+		<input name="starttime" type="time"  required>
+
+		<label for="enddate">End Date</label>
+		<input name="enddate" type="date"  required>
+		<input name="endtime" type="time"  required>
+
+		<label for="duration">Duration</label>
+		<select name="duration"  required>
+			<option value="complete">Complete Day</option>
+			<option value="half">Half Day</option>
+			<option value="other">Other</option>
+		</select>
+
+		<label for="reason">Reason of Absence</label>
+		<select name="reason"  required>
+			<option value="Medical appointment">Medical appointment</option>
+			<option value="Accident">Accident</option>
+			<option value="Injuries/Illness">Injuries/Illness</option>
+			<option value="Home/Family responsibility">Home/Family responsibility</option>
+			<option value="Personal errands">Personal errands</option>
+			<option value="Other">Others</option>
+		</select>
+		
+		<label for="comments">Comments (optional)</label>
+		<textarea name="comments" rows="6">
+		</textarea>
+		<input type="submit" value="Send Form">
+	</form>	
+</template>

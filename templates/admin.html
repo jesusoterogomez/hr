@@ -1,0 +1,15 @@
+<template name="admin">
+	<ul>
+		<!-- test -->
+		{{#each posts}}
+		<li>
+			<p>{{date}}</p>
+			<p>{{user}}</p>
+			<p>{{data.type}}</p>
+			<p>{{data.startdate}}</p>
+			<p>{{data.enddate}}</p>
+			<p>{{data.reason}}</p>
+		</li>
+		{{/each}}
+	</ul>
+</template>
